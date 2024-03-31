@@ -8,6 +8,9 @@ import Errorpage from './Errorpage';
 import Login from "./Login";
 import Shop from "./Shop";
 import Admin from './Admin';
+import SinglePage from './SinglePage';
+
+
 
 function App() {
   return (
@@ -19,6 +22,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/singleproduct/:id" element={<SinglePage/>} />
         <Route path="*" element={<Errorpage/>} />
       </Routes>
     </BrowserRouter>

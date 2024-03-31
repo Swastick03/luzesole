@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-shadow: border-box;
+  
 
   font-family: "Rubik", sans-serif;
 }
@@ -52,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   justify-content: space-around;
+ 
   padding-top: 10px;
   flex-wrap: wrap;
 }
@@ -234,7 +235,7 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
+  
   width: 50%;
   margin-bottom: 12px;
 }

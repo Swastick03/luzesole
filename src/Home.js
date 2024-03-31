@@ -25,7 +25,7 @@ function Home() {
       <Nike />
       <NavLink to="/shop">
         <img
-          src="https://www.clubhousegolf.co.uk/acatalog/puma2023igniteelevateshoebanner.jpg"
+          src="https://cdn.citymapia.com/puma-store/2758/businessbanner.jpg?width=1260&v=20211021055806);"
           alt=" "
           style={{ width: "100%", padding: "3rem 0rem" }}
         />

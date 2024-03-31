@@ -1,45 +1,29 @@
 import React from "react";
-import nike_products from "./product/nike_products";
-import puma_products from "./product/puma_products";
-import adidas_products from "./product/adidas_products";
+import { useProductContext } from "./context/productcontext";
 import Card from "./Components/Card";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Loader from "./Components/Loader";
 
 function createcard1(products) {
   return (
     <Card
-      key={products.id}
+      key={products._id}
+      id={products._id}
       name={products.name}
       price={products.price}
       img_ref={products.img_ref}
-      brand="Nike"
+      brand={products.brand}
     />
   );
 }
-function createcard2(products) {
-  return (
-    <Card
-      key={products.id}
-      name={products.name}
-      price={products.price}
-      img_ref={products.img_ref}
-      brand="Puma"
-    />
-  );
-}
-function createcard3(products) {
-  return (
-    <Card
-      key={products.id}
-      name={products.name}
-      price={products.price}
-      img_ref={products.img_ref}
-      brand="Adidas"
-    />
-  );
-}
+
 function Shop() {
+  const {isLoading, products} = useProductContext();
+  
+  if(isLoading){
+    return <Loader/>;
+  }
   return (
     <>
       <Header />
@@ -50,13 +34,7 @@ function Shop() {
       />
       <section id="product1" className="section-p1">
         <div className="container">
-          <div className="row ">{nike_products.map(createcard1)}</div>
-        </div>
-        <div className="container">
-          <div className="row ">{puma_products.map(createcard2)}</div>
-        </div>
-        <div className="container">
-          <div className="row ">{adidas_products.map(createcard3)}</div>
+          <div className="row ">{products.map(createcard1)}</div>
         </div>
       </section>
       <Footer />
