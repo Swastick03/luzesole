@@ -9,6 +9,7 @@ function createcard(products) {
     <Card
       key={products._id}
       id={products._id}
+      rating={products.rating}
       name={products.name}
       price={products.price}
       img_ref={products.img_ref}

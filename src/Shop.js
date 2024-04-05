@@ -11,6 +11,7 @@ function createcard1(products) {
       key={products._id}
       id={products._id}
       name={products.name}
+      rating={products.rating}
       price={products.price}
       img_ref={products.img_ref}
       brand={products.brand}

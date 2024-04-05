@@ -9,6 +9,8 @@ import FormatPrice from "./Helper/FormatPrice";
 import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import { LiaShippingFastSolid } from "react-icons/lia";
+import Star from "./Components/Star";
+import AddToCart from "./Components/AddToCart";
 
 
 
@@ -29,7 +31,7 @@ const SinglePage=()=>{
         }
     }, [singleProduct]);
     
-    const {_id,brand,img_ref,description,rating,name,price,img1,img2,img3 } = singleProduct[0] || {};
+    const {_id,brand,img_ref,description,reviews,stock,rating,name,price,img1,img2,img3 } = singleProduct[0] || {};
 
     // const img3 = "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/edd9ed4ed4a0438bae1cadb901365eee_9366/RUNMAGICA_SHOES_Black_EY2975_01_standard.jpg";
     
@@ -62,7 +64,7 @@ const SinglePage=()=>{
             </div>
             <div className="product-info col-lg-4 col-md-4 col-sm-12">
                 <h2  className="product-name">{name} </h2>
-                <p>Rating: {rating}</p>
+                <Star stars={rating} reviews={reviews} />
                 <p className="product-data-price">
                     MRP:  <del>
                         <FormatPrice price={price + (price*0.15)}/>
@@ -103,7 +105,12 @@ const SinglePage=()=>{
               <p>
                 Brand :<span style={{textTransform:"capitalize"}}> {brand} </span>
               </p>
+              <p>
+                Available Stocks:  <span> {stock} </span>
+              </p>
             </div>
+            <hr/>
+            <AddToCart product={singleProduct[0]} />
                 
             </div></div>
         </div>

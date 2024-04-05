@@ -1,8 +1,9 @@
 import React from "react";
 import FormatPrice from "../Helper/FormatPrice";
 import { NavLink } from "react-router-dom";
+import Star from "./Star";
 
-function Card({ id,name, brand, price, img_ref }) {
+function Card({ id,name,rating, brand, price, img_ref }) {
 
 
 
@@ -15,11 +16,7 @@ function Card({ id,name, brand, price, img_ref }) {
           <span style={{ textTransform: "capitalize" }}>{brand}</span>
           <h5 style={{ textTransform: "capitalize" }}>{name}</h5>
           <div className="star">
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
-            <i className="fas fa-star"></i>
+          <Star stars={rating} reviews={0} />
           </div>
           <h4>{<FormatPrice price={price}/>}</h4>
         </div>

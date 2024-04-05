@@ -4,6 +4,7 @@
     justify-items: center;
     align-items: center;
     width: 13vmax;
+    height: 40vmax;
     display: grid;
     /* order: 2; */
 
@@ -16,6 +17,7 @@
   }
   figure{
     margin: 0 0 0.4rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .grid-four-column {
@@ -34,6 +36,8 @@
 }
 .main-screen-img{
  width: 80%;
+ box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .product-img{
@@ -51,6 +55,7 @@
 
 .product-data-price{
   font-weight: bold;
+  margin-top: 1rem;
 }
 
 .product-set-price{
@@ -89,3 +94,109 @@
   font-size: 0.8rem;
   padding-top: 0.4rem;
 }
+
+/* Reviews and star icons */
+
+
+.icon-style .icon{
+  color: orange;
+  display: inline;
+  margin: 0 2px;
+  
+}
+.icon-style p{
+  display: inline;
+  padding: 1rem;
+}
+
+
+
+/* Add to Cart */
+
+.Available_colour p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btnStyle {
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: #000;
+  border-radius: 50%;
+  margin-left: 0.6rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  
+}
+.btnStyle:hover{
+  transform: scale(1.2);
+}
+.checkStyle {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+ button {
+  text-decoration: none;
+  max-width: auto;
+  background-color: #0bbeb3;
+  color: rgb(255 255 255);
+  padding: 1.4rem 2.4rem;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+}
+.btn{
+  font-weight: bold;
+}
+
+button:hover,  button:active {
+    box-shadow: 0 1rem 1rem 0 rgba(187, 188, 189, 0.3);
+    
+    transform: scale(0.96);
+  }
+
+
+  /* amount toggle */
+
+  .amount-toggle {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    height:3rem ;
+    width: 9rem;
+    align-items: center;
+    font-size: 1 rem;
+}
+
+.amount-button{
+  display: flex;
+  background:#fff;
+  width: 2.3rem;
+  height: 2.3rem;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.amount-button:hover{
+  box-shadow: 0 0.5rem 0.5rem 0 rgba(187, 188, 189, 0.6);
+    cursor:pointer;
+    transform: scale(0.96);
+}
+
+
+
+.amount-style {
+  font-weight: bold;
+  margin: 0 1rem;
+  font-size: 1rem;}
+
