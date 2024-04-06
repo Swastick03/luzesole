@@ -106,7 +106,7 @@ const SinglePage=()=>{
                 Brand :<span style={{textTransform:"capitalize"}}> {brand} </span>
               </p>
               <p>
-                Available Stocks:  <span> {stock} </span>
+                Available Stocks:  <span> {stock} </span> units
               </p>
             </div>
             <hr/>
