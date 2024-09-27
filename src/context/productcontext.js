@@ -4,7 +4,7 @@ import reducer from "../reducer/productReducer";
 
 const AppContext = createContext();
 
-const API = "https://luzesole-api.up.railway.app/api/products";
+const API = "https://luzesole-api.onrender.com/api/products";
 
 const initialState = {
     isLoading:false,

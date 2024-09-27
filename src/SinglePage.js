@@ -14,7 +14,7 @@ import AddToCart from "./Components/AddToCart";
 
 
 
-const API="https://luzesole-api.up.railway.app/api/products"
+const API="https://luzesole-api.onrender.com/api/products"
 const SinglePage=()=>{
     const {getSingleProduct,  isSingleLoading, singleProduct} = useProductContext();
     const {id} = useParams();
